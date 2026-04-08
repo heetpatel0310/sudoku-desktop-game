@@ -88,6 +88,7 @@
             <plugin>
                 <groupId>org.jooq</groupId>
                 <artifactId>jooq-codegen-maven</artifactId>
+                <version>3.19.9</version>
                 <executions>
                     <execution>
                         <id>generate-sources</id>
@@ -98,7 +99,7 @@
                         <configuration>
                             <jdbc>
                                 <driver>org.sqlite.JDBC</driver>
-                                <url>jdbc:sqlite:JdbcDao/sudoku.db</url>
+                                <url>jdbc:sqlite:${project.basedir}/sudoku.db</url>
                             </jdbc>
                             <generator>
                                 <database>
